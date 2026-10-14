@@ -1,7 +1,13 @@
 package com.example;
 
 public class App {
-    public String reverseString(String s) {
-        return new StringBuilder(s).reverse().toString();
+    public int countVowels(String s) {
+        int count = 0;
+        for (char ch : s.toLowerCase().toCharArray()) {
+            if ("aeiou".indexOf(ch) >= 0) {
+                count++;
+            }
+        }
+        return count;
     }
 }

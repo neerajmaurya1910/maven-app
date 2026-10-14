@@ -7,26 +7,26 @@ public class AppTest {
 
     @Test
     public void testSimpleWord() {
-        assertEquals("olleh", new App().reverseString("hello"));
+        assertEquals(2, new App().countVowels("hello"));
     }
 
     @Test
     public void testEmptyString() {
-        assertEquals("", new App().reverseString(""));
+        assertEquals(0, new App().countVowels(""));
     }
 
     @Test
-    public void testSingleCharacter() {
-        assertEquals("a", new App().reverseString("a"));
+    public void testNoVowels() {
+        assertEquals(0, new App().countVowels("rhythm"));
+    }
+
+    @Test
+    public void testAllVowelsUppercase() {
+        assertEquals(5, new App().countVowels("AEIOU"));
     }
 
     @Test
     public void testMixedCase() {
-        assertEquals("avaJ", new App().reverseString("Java"));
-    }
-
-    @Test
-    public void testWithSpace() {
-        assertEquals("b a", new App().reverseString("a b"));
+        assertEquals(3, new App().countVowels("Programming"));
     }
 }
