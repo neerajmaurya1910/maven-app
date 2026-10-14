@@ -6,27 +6,27 @@ import static org.junit.Assert.*;
 public class AppTest {
 
     @Test
-    public void testPalindromeWord() {
-        assertTrue(new App().isPalindromeString("madam"));
-    }
-
-    @Test
-    public void testNotPalindrome() {
-        assertFalse(new App().isPalindromeString("hello"));
+    public void testSimpleWord() {
+        assertEquals("olleh", new App().reverseString("hello"));
     }
 
     @Test
     public void testEmptyString() {
-        assertTrue(new App().isPalindromeString(""));
+        assertEquals("", new App().reverseString(""));
     }
 
     @Test
-    public void testMixedCasePalindrome() {
-        assertTrue(new App().isPalindromeString("Racecar"));
+    public void testSingleCharacter() {
+        assertEquals("a", new App().reverseString("a"));
     }
 
     @Test
-    public void testTwoDifferentCharacters() {
-        assertFalse(new App().isPalindromeString("ab"));
+    public void testMixedCase() {
+        assertEquals("avaJ", new App().reverseString("Java"));
+    }
+
+    @Test
+    public void testWithSpace() {
+        assertEquals("b a", new App().reverseString("a b"));
     }
 }
