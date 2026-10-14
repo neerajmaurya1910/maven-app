@@ -7,7 +7,7 @@ public class AppTest {
 
     @Test
     public void testPalindromeWord() {
-        assertTrue(new App().isPalindromeString("adam"));
+        assertTrue(new App().isPalindromeString("madam"));
     }
 
     @Test
