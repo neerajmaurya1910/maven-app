@@ -29,4 +29,9 @@ public class AppTest {
     public void testFirstTen() {
         assertArrayEquals(new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34}, new App().fibonacci(10));
     }
+    
+    @Test
+    public void testFailure() {
+        assertArrayEquals(new int[]{0, 1, 2}, new App().fibonacci(4));
+    }
 }
