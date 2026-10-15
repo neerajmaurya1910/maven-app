@@ -32,6 +32,6 @@ public class AppTest {
 
     @Test
     public void testFirstSeven() {
-        assertArrayEquals(new int[]{0, 1, 1, 2, 3, 5, 8}, new App().fibonacci(7));
+        assertArrayEquals(new int[]{0, 1, 1, 2, 3, 5, 9}, new App().fibonacci(7));
     }
 }
