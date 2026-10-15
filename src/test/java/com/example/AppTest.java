@@ -6,27 +6,27 @@ import static org.junit.Assert.*;
 public class AppTest {
 
     @Test
-    public void testSimpleWord() {
-        assertEquals(2, new App().countVowels("hello"));
+    public void testFirstFive() {
+        assertArrayEquals(new int[]{0, 1, 1, 2, 3}, new App().fibonacci(5));
     }
 
     @Test
-    public void testEmptyString() {
-        assertEquals(0, new App().countVowels(""));
+    public void testSingleTerm() {
+        assertArrayEquals(new int[]{0}, new App().fibonacci(1));
     }
 
     @Test
-    public void testNoVowels() {
-        assertEquals(0, new App().countVowels("rhythm"));
+    public void testZeroTerms() {
+        assertArrayEquals(new int[]{}, new App().fibonacci(0));
     }
 
     @Test
-    public void testAllVowelsUppercase() {
-        assertEquals(5, new App().countVowels("AEIOU"));
+    public void testTwoTerms() {
+        assertArrayEquals(new int[]{0, 1}, new App().fibonacci(2));
     }
 
     @Test
-    public void testMixedCase() {
-        assertEquals(3, new App().countVowels("Programming"));
+    public void testFirstTen() {
+        assertArrayEquals(new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34}, new App().fibonacci(10));
     }
 }
